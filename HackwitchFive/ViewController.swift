@@ -13,11 +13,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var carArray = [ " honda", "ferrari", " lamborghnini", "bently"]
-    
+    var restaurantImageData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//self. tableVeiw. datasource = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
+        let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+        restaurantImageData = dict!.object(forKey: "restaurantImages") as! [String]
+
+        
+        //self. tableVeiw. datasource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let Text = carArray[indexPath.row]
         cell.textLabel?.text = Text
         return cell
+        func tableView(_ tableView: UITableView, didSelectRowAt indexpath: IndexPath) {
+            tableView.deselectRow(at: indexPath as IndexPath ,animated: true)
+        }
     }
     
     

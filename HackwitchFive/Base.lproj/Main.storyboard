@@ -49,5 +49,30 @@
             </objects>
             <point key="canvasLocation" x="-99.375" y="92.957746478873247"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0IQ-ia-GHC">
+            <objects>
+                <viewController id="cl8-nJ-iOu" customClass="detailViewController" customModule="HackwitchFive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AAF-Fo-jz0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qwq-ZW-kpO">
+                                <rect key="frame" x="40" y="68" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="8yN-qk-HBS"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageVeiw" destination="Qwq-ZW-kpO" id="ahf-ag-yxb"/>
+                        <outlet property="imageView" destination="AAF-Fo-jz0" id="fmO-Bf-Eek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93H-sf-pOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="93"/>
+        </scene>
     </scenes>
 </document>
